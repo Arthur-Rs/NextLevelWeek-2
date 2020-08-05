@@ -1,9 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+
+// => Css
+import './style.css'
 
 // => Images
 import Logo from '../../assets/images/logo.svg'
 import LandingLogo from '../../assets/images/landing.svg'
 import StudyIcon from '../../assets/images/icons/study.svg'
+import GiveClassesIcon from '../../assets/images/icons/give-classes.svg'
+import PurpleHeart from '../../assets/images/icons/purple-heart.svg'
 
 const Landing: React.FC = () => {
   return (
@@ -18,11 +24,20 @@ const Landing: React.FC = () => {
         <img src={LandingLogo} alt="Landing" className="hero-image" />
 
         <div className="buttons-container">
-          <a href="#" className="study">
+          <Link to="study" className="study">
             <img src={StudyIcon} alt="Study" />
             Estudar
-          </a>
+          </Link>
+          <Link to="give-classes" className="give-classes">
+            <img src={GiveClassesIcon} alt="Give Classes" />
+            Dar aulas
+          </Link>
         </div>
+
+        <span className="total-connections">
+          Total de 200 conexões já realizadas
+          <img src={PurpleHeart} alt="Coração Roxo" />
+        </span>
 
       </div>
     </div>
